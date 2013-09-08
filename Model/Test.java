@@ -1,7 +1,6 @@
 package java1.oop.tictactoe.test;
 
 import java1.oop.tictactoe.Game;
-import java1.oop.tictactoe.Player;
 
 /** 
  * Класс для тестирования игры
