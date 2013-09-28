@@ -1,4 +1,4 @@
-package java1.oop.tictactoe;
+package tictactoe.model;
 
 final class Cell {
 	/** номер ячейки на поле */

@@ -1,4 +1,4 @@
-package java1.oop.tictactoe;
+package tictactoe.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,26 +50,5 @@ final class Field {
 	/**
 	 * Вернуть текстовое представление поля
 	 * @return текстовое представление
-	 */
-	public String getField(){
-		StringBuilder str = new StringBuilder();
-		Piece piece = null;
-		for(int i=0; i < cells.size(); i++){
-			str.append('['); 
-			str.append(i); str.append(',');
-			piece = cells.get(i).getPiece();
-			if(piece != null){
-				str.append(piece.name()); 
-			}else{
-				str.append(' ');
-			}
-			str.append(']');
-			if ((i+1) % this.getSize() == 0 ) str.append("\n");
-		}
-		return str.toString();
-	}
-	
-	private int getSize(){
-		return size;
-	}
+	 */		
 }

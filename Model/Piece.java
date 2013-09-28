@@ -1,9 +1,9 @@
-package java1.oop.tictactoe;
+package tictactoe.model;
 
 /** 
  * Фигура игрока
  */
 public enum Piece {
 	/** возможные варианты значений объекта этого типа */
-	x, o;
+	X, O;
 }

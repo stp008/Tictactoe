@@ -1,4 +1,4 @@
-package java1.oop.tictactoe;
+package tictactoe.model;
 
 public final class Player {
 	/** идентификатор игрока */
@@ -29,6 +29,8 @@ public final class Player {
 		return piece;
 	}
 
+	
+
 	/** 
 	 * Вернуть идентификатор игрока
 	 * @return идентфикатор
@@ -57,4 +59,6 @@ public final class Player {
 	public boolean isActive() {
 		return Active;
 	}
+	
+	
 }

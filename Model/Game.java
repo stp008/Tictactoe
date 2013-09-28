@@ -1,4 +1,4 @@
-package java1.oop.tictactoe;
+package tictactoe.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,13 +39,13 @@ public class Game {
 			int index;
 			/** первый играет за крестики */
 			if(players.get(1) == null){
-				piece = Piece.x;
+				piece = Piece.X;
 				index = 1;
 				players.put(index, new Player(index, name, piece));
 				players.get(1).activate();
 			}else{
 				/** второй играет за нолики */
-				piece = Piece.o;
+				piece = Piece.O;
 				index = 2;
 				players.put(index, new Player(index, name, piece));
 			}
@@ -96,12 +96,19 @@ public class Game {
 	public Player getPlayer(int id){
 		return players.get(id);
 	}
-
-	/**
-	 * Вернуть текстовое представление игрового поля
-	 * @return поле
-	 */
-	public String getField() {
-		return field.getField();
+	
+	public Player getNextPlayer(int id){
+		
+		if (id == 1) return players.get(2);
+		if (id == 2) return players.get(1);
+		return null;
+		
 	}
+		
+	public int getActivePlayer(){
+		if (players.get(1).isActive()) return players.get(1).getId();
+		if (players.get(2).isActive()) return players.get(2).getId();
+		return 0;
+	}
+
 }
